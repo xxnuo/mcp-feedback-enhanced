@@ -54,7 +54,7 @@
 /* 應用資訊區域 */
 .app-info-section {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   min-width: 0;
   flex: 1;
 }
@@ -84,11 +84,12 @@
 }
 
 .countdown-timer {
-  font-family: 'Consolas', 'Monaco', monospace;
   font-weight: bold;
 }
 
 .project-info {
+  align-content: center;
+  padding-left: 10px;
   font-size: 11px;
   color: var(--text-secondary);
   opacity: 0.8;
@@ -102,7 +103,7 @@
 .connection-status-group {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 6px;
   flex: 2;
   justify-content: space-between;
 }
@@ -111,15 +112,15 @@
 .session-status-info {
   display: flex;
   flex-direction: column;
-  gap: 4px;
   flex-shrink: 0;
   min-width: 0;
+  margin-right: 8px;
 }
 
 .session-status-info .current-session-info {
   display: flex;
-  flex-direction: column;
-  gap: 2px;
+  flex-direction: row;
+  align-items: center;
 }
 
 .session-status-info .session-indicator {
@@ -264,8 +265,7 @@
 /* 連線和狀態資訊組合容器 */
 .connection-status-combined {
   display: flex;
-  flex-direction: column;
-  gap: 8px;
+  flex-direction: row;
   align-items: center;
   flex: 1;
   justify-content: center;
@@ -274,7 +274,7 @@
 /* 詳細狀態資訊 */
 .detailed-status-info {
   display: flex;
-  gap: 16px;
+  /* gap: 16px; */
   margin-left: 0;
 }
 
@@ -299,7 +299,7 @@
   display: flex;
   align-items: center;
   padding: 0;
-    padding-left: 1px;
+  padding-left: 1px;
   border-radius: 16px;
   background: rgba(0, 0, 0, 0.3);
   border: 1px solid transparent;
@@ -354,18 +354,18 @@
 @keyframes pulse-ring {
   0% {
     transform: scale(1);
-      opacity: 0.3;
-    }
-    
-    50% {
-      transform: scale(1.5);
-      opacity: 0.1;
-    }
-    
-    100% {
-      transform: scale(2);
-      opacity: 0;
-    }
+    opacity: 0.3;
+  }
+
+  50% {
+    transform: scale(1.5);
+    opacity: 0.1;
+  }
+
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
 }
 
 .connection-quality {
@@ -374,7 +374,7 @@
 }
 
 .latency-indicator {
-    opacity: 0.8;
+  opacity: 0.8;
 }
 
 .signal-strength {
@@ -404,7 +404,9 @@
 
 .connection-details {
   display: flex;
-  gap: 12px;
+  gap: 8px;
+  margin-right: 8px;
+  justify-content: center;
   font-size: 11px;
   opacity: 0.7;
 }
@@ -685,6 +687,7 @@
   .connection-status-combined {
     width: 100%;
     align-items: center;
+    justify-content: center;
   }
 
   .detailed-status-info {
@@ -709,8 +712,8 @@
 .loading-skeleton {
   background: linear-gradient(90deg,
       var(--bg-tertiary) 25%,
-        rgba(255, 255, 255, 0.1) 50%,
-        var(--bg-tertiary) 75%);
+      rgba(255, 255, 255, 0.1) 50%,
+      var(--bg-tertiary) 75%);
   background-size: 200% 100%;
   animation: loading-shimmer 1.5s infinite;
 }
@@ -718,335 +721,334 @@
 @keyframes loading-shimmer {
   0% {
     background-position: -200% 0;
-    }
-    
+
     100% {
       background-position: 200% 0;
     }
-}
-
-/* ===== 無障礙支援 ===== */
-.session-card:focus {
-  outline: 2px solid var(--accent-color);
-  outline-offset: 2px;
-}
-
-.btn-icon:focus,
-.btn-small:focus {
-  outline: 2px solid var(--accent-color);
-  outline-offset: 2px;
-}
-
-/* ===== 會話詳情彈窗 ===== */
-.session-details-modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 2000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.modal-backdrop {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(4px);
-}
-
-.modal-content {
-  position: relative;
-  background: var(--bg-primary);
-  border: 1px solid var(--border-color);
-  border-radius: 12px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-  max-width: 500px;
-  width: 90%;
-  max-height: 80vh;
-  overflow: hidden;
-  animation: modalSlideIn var(--transition-fast) var(--easing-smooth);
-}
-
-@keyframes modalSlideIn {
-  from {
-    opacity: 0;
-    transform: scale(0.9) translateY(-20px);
   }
 
-  to {
-    opacity: 1;
-    transform: scale(1) translateY(0);
+  /* ===== 無障礙支援 ===== */
+  .session-card:focus {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
   }
-}
 
-.modal-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 16px 20px;
-  background: var(--bg-secondary);
-  border-bottom: 1px solid var(--border-color);
-}
-
-.modal-header h3 {
-  margin: 0;
-  font-size: 16px;
-  font-weight: 600;
-  color: var(--text-primary);
-}
-
-.modal-close {
-  background: none;
-  border: none;
-  font-size: 24px;
-  color: var(--text-secondary);
-  cursor: pointer;
-  padding: 0;
-  width: 32px;
-  height: 32px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 4px;
-  transition: all var(--transition-fast) ease;
-}
-
-.modal-close:hover {
-  background: var(--bg-tertiary);
-  color: var(--text-primary);
-}
-
-.modal-body {
-  padding: 20px;
-  max-height: 60vh;
-  overflow-y: auto;
-}
-
-.detail-row {
-  display: flex;
-  margin-bottom: 12px;
-  align-items: flex-start;
-}
-
-.detail-label {
-  font-weight: 500;
-  color: var(--text-secondary);
-  min-width: 80px;
-  margin-right: 12px;
-  font-size: 13px;
-}
-
-.detail-value {
-  flex: 1;
-  color: var(--text-primary);
-  font-size: 13px;
-  word-break: break-all;
-}
-
-.detail-value.session-id {
-  font-family: 'Consolas', 'Monaco', monospace;
-  background: var(--bg-tertiary);
-  padding: 2px 6px;
-  border-radius: 4px;
-  font-size: 11px;
-}
-
-.detail-value.project-path {
-  font-family: 'Consolas', 'Monaco', monospace;
-  background: var(--bg-tertiary);
-  padding: 4px 8px;
-  border-radius: 4px;
-  font-size: 11px;
-  word-break: break-all;
-}
-
-.detail-value.summary {
-  background: var(--bg-secondary);
-  padding: 8px 12px;
-  border-radius: 6px;
-  border-left: 3px solid var(--accent-color);
-  line-height: 1.4;
-  margin-top: 4px;
-}
-
-.modal-footer {
-  padding: 16px 20px;
-  background: var(--bg-secondary);
-  border-top: 1px solid var(--border-color);
-  display: flex;
-  justify-content: flex-end;
-}
-
-.btn-secondary {
-  padding: 8px 16px;
-  background: var(--bg-tertiary);
-  border: 1px solid var(--border-color);
-  color: var(--text-primary);
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 13px;
-  transition: all var(--transition-fast) ease;
-}
-
-.btn-secondary:hover {
-  background: var(--accent-color);
-  color: white;
-  border-color: var(--accent-color);
-}
-
-/* ===== 用戶訊息記錄樣式 ===== */
-.user-messages-section {
-  margin-top: 16px;
-  border-top: 1px solid var(--border-color);
-  padding-top: 16px;
-}
-
-.user-messages-summary {
-  margin-bottom: 12px;
-  padding: 8px 12px;
-  background: var(--bg-tertiary);
-  border-radius: 6px;
-  font-size: 13px;
-  color: var(--text-secondary);
-}
-
-.user-messages-list {
-  max-height: 300px;
-  overflow-y: auto;
-  border: 1px solid var(--border-color);
-  border-radius: 6px;
-  background: var(--bg-primary);
-}
-
-.user-message-item {
-  padding: 12px;
-  border-bottom: 1px solid var(--border-color);
-  transition: background var(--transition-fast) ease;
-}
-
-.user-message-item:last-child {
-  border-bottom: none;
-}
-
-.user-message-item:hover {
-  background: var(--bg-secondary);
-}
-
-.message-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 8px;
-  font-size: 12px;
-}
-
-.message-index {
-  background: var(--accent-color);
-  color: white;
-  padding: 2px 6px;
-  border-radius: 10px;
-  font-weight: 500;
-  font-size: 10px;
-}
-
-.message-time {
-  color: var(--text-secondary);
-  font-family: 'Consolas', 'Monaco', monospace;
-}
-
-.message-method {
-  padding: 2px 8px;
-  border-radius: 12px;
-  font-size: 10px;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.message-method:contains("自動") {
-  background: rgba(255, 152, 0, 0.2);
-  color: var(--warning-color);
-  border: 1px solid var(--warning-color);
-}
-
-.message-method:contains("手動") {
-  background: rgba(76, 175, 80, 0.2);
-  color: var(--success-color);
-  border: 1px solid var(--success-color);
-}
-
-.message-content,
-.message-stats {
-  font-size: 13px;
-  line-height: 1.4;
-  color: var(--text-primary);
-  background: var(--bg-secondary);
-  padding: 8px 12px;
-  border-radius: 4px;
-  border-left: 3px solid var(--accent-color);
-}
-
-.message-content strong,
-.message-stats strong {
-  color: var(--text-secondary);
-  font-weight: 500;
-}
-
-.message-images {
-  margin-top: 8px;
-  font-size: 12px;
-  color: var(--text-secondary);
-}
-
-/* 隱私等級選擇器樣式增強 */
-#userMessagePrivacyLevel {
-  background: var(--bg-secondary);
-  border: 1px solid var(--border-color);
-  color: var(--text-primary);
-  border-radius: 6px;
-  padding: 6px 12px;
-  font-size: 13px;
-  transition: all var(--transition-fast) ease;
-}
-
-#userMessagePrivacyLevel:focus {
-  outline: none;
-  border-color: var(--accent-color);
-  box-shadow: 0 0 0 2px rgba(0, 122, 204, 0.2);
-}
-
-#userMessagePrivacyLevel option {
-  background: var(--bg-secondary);
-  color: var(--text-primary);
-}
-
-/* 用戶訊息記錄開關樣式已整合到標準切換開關樣式中 */
-
-/* 切換開關容器樣式 */
-.toggle-container {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.toggle-label {
-  font-size: 13px;
-  color: var(--text-primary);
-  cursor: pointer;
-  user-select: none;
-}
-
-/* 減少動畫偏好 */
-@media (prefers-reduced-motion: reduce) {
-  * {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
+  .btn-icon:focus,
+  .btn-small:focus {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
   }
-}
+
+  /* ===== 會話詳情彈窗 ===== */
+  .session-details-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .modal-backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+  }
+
+  .modal-content {
+    position: relative;
+    background: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    max-width: 500px;
+    width: 90%;
+    max-height: 80vh;
+    overflow: hidden;
+    animation: modalSlideIn var(--transition-fast) var(--easing-smooth);
+  }
+
+  @keyframes modalSlideIn {
+    from {
+      opacity: 0;
+      transform: scale(0.9) translateY(-20px);
+    }
+
+    to {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+  }
+
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    background: var(--bg-secondary);
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .modal-header h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-primary);
+  }
+
+  .modal-close {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: var(--text-secondary);
+    cursor: pointer;
+    padding: 0;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    transition: all var(--transition-fast) ease;
+  }
+
+  .modal-close:hover {
+    background: var(--bg-tertiary);
+    color: var(--text-primary);
+  }
+
+  .modal-body {
+    padding: 20px;
+    max-height: 60vh;
+    overflow-y: auto;
+  }
+
+  .detail-row {
+    display: flex;
+    margin-bottom: 12px;
+    align-items: flex-start;
+  }
+
+  .detail-label {
+    font-weight: 500;
+    color: var(--text-secondary);
+    min-width: 80px;
+    margin-right: 12px;
+    font-size: 13px;
+  }
+
+  .detail-value {
+    flex: 1;
+    color: var(--text-primary);
+    font-size: 13px;
+    word-break: break-all;
+  }
+
+  .detail-value.session-id {
+    font-family: 'Consolas', 'Monaco', monospace;
+    background: var(--bg-tertiary);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 11px;
+  }
+
+  .detail-value.project-path {
+    font-family: 'Consolas', 'Monaco', monospace;
+    background: var(--bg-tertiary);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    word-break: break-all;
+  }
+
+  .detail-value.summary {
+    background: var(--bg-secondary);
+    padding: 8px 12px;
+    border-radius: 6px;
+    border-left: 3px solid var(--accent-color);
+    line-height: 1.4;
+    margin-top: 4px;
+  }
+
+  .modal-footer {
+    padding: 16px 20px;
+    background: var(--bg-secondary);
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .btn-secondary {
+    padding: 8px 16px;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: all var(--transition-fast) ease;
+  }
+
+  .btn-secondary:hover {
+    background: var(--accent-color);
+    color: white;
+    border-color: var(--accent-color);
+  }
+
+  /* ===== 用戶訊息記錄樣式 ===== */
+  .user-messages-section {
+    margin-top: 16px;
+    border-top: 1px solid var(--border-color);
+    padding-top: 16px;
+  }
+
+  .user-messages-summary {
+    margin-bottom: 12px;
+    padding: 8px 12px;
+    background: var(--bg-tertiary);
+    border-radius: 6px;
+    font-size: 13px;
+    color: var(--text-secondary);
+  }
+
+  .user-messages-list {
+    max-height: 300px;
+    overflow-y: auto;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background: var(--bg-primary);
+  }
+
+  .user-message-item {
+    padding: 12px;
+    border-bottom: 1px solid var(--border-color);
+    transition: background var(--transition-fast) ease;
+  }
+
+  .user-message-item:last-child {
+    border-bottom: none;
+  }
+
+  .user-message-item:hover {
+    background: var(--bg-secondary);
+  }
+
+  .message-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    font-size: 12px;
+  }
+
+  .message-index {
+    background: var(--accent-color);
+    color: white;
+    padding: 2px 6px;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 10px;
+  }
+
+  .message-time {
+    color: var(--text-secondary);
+    font-family: 'Consolas', 'Monaco', monospace;
+  }
+
+  .message-method {
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 10px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .message-method:contains("自動") {
+    background: rgba(255, 152, 0, 0.2);
+    color: var(--warning-color);
+    border: 1px solid var(--warning-color);
+  }
+
+  .message-method:contains("手動") {
+    background: rgba(76, 175, 80, 0.2);
+    color: var(--success-color);
+    border: 1px solid var(--success-color);
+  }
+
+  .message-content,
+  .message-stats {
+    font-size: 13px;
+    line-height: 1.4;
+    color: var(--text-primary);
+    background: var(--bg-secondary);
+    padding: 8px 12px;
+    border-radius: 4px;
+    border-left: 3px solid var(--accent-color);
+  }
+
+  .message-content strong,
+  .message-stats strong {
+    color: var(--text-secondary);
+    font-weight: 500;
+  }
+
+  .message-images {
+    margin-top: 8px;
+    font-size: 12px;
+    color: var(--text-secondary);
+  }
+
+  /* 隱私等級選擇器樣式增強 */
+  #userMessagePrivacyLevel {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    border-radius: 6px;
+    padding: 6px 12px;
+    font-size: 13px;
+    transition: all var(--transition-fast) ease;
+  }
+
+  #userMessagePrivacyLevel:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 2px rgba(0, 122, 204, 0.2);
+  }
+
+  #userMessagePrivacyLevel option {
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+  }
+
+  /* 用戶訊息記錄開關樣式已整合到標準切換開關樣式中 */
+
+  /* 切換開關容器樣式 */
+  .toggle-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .toggle-label {
+    font-size: 13px;
+    color: var(--text-primary);
+    cursor: pointer;
+    user-select: none;
+  }
+
+  /* 減少動畫偏好 */
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
