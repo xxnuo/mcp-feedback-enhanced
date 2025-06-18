@@ -152,7 +152,7 @@
             margin-bottom: 16px;
         }
 
-        /* 確保 AI 摘要區域能夠自動擴展 */
+        /* 確保 摘要區域能夠自動擴展 */
         .combined-section .section-header {
             flex-shrink: 0; /* 標題區域不收縮 */
         }
@@ -398,7 +398,7 @@
                 <h1 data-i18n="app.title">MCP Feedback Enhanced</h1>
             </div>
             <div class="project-info">
-                📂 <span data-i18n="app.projectDirectory">專案目錄</span>:
+                <span data-i18n="app.projectDirectory">專案目錄</span>:
                 <span id="projectPathDisplay" class="project-path-display"
                       data-full-path="{{ project_directory }}"
                       data-i18n-title="app.clickToCopyPath"
@@ -488,7 +488,7 @@
                         工作區
                     </button>
                     <button class="tab-button" data-tab="summary" data-i18n="tabs.summary">
-                        AI 摘要
+                        摘要
                     </button>
                     <button class="tab-button" data-tab="command" data-i18n="tabs.command">
                         命令
@@ -509,10 +509,10 @@
 
 
 
-            <!-- ===== AI 摘要分頁 ===== -->
+            <!-- ===== 摘要分頁 ===== -->
             <div id="tab-summary" class="tab-content">
                 <div class="section-description" data-i18n="summary.description">
-                    以下是 AI 助手完成的工作摘要，請仔細查看並提供您的回饋意見。
+                    以下是 助手完成的工作摘要，請仔細查看並提供您的回饋意見。
                 </div>
 
                 <div class="input-group">
@@ -554,10 +554,10 @@
             <!-- 工作區分頁 - 主要分頁 -->
             <div id="tab-combined" class="tab-content active">
                 <div class="combined-content">
-                    <!-- AI 摘要區域 -->
+                    <!-- 摘要區域 -->
                     <div class="combined-section">
                         <div class="section-header">
-                            <h3 class="combined-section-title" data-i18n="combined.summaryTitle">AI 工作摘要</h3>
+                            <h3 class="combined-section-title" data-i18n="combined.summaryTitle">工作摘要</h3>
                         </div>
                         <div class="combined-summary">
                             <div id="combinedSummaryContent" class="text-input" style="min-height: 200px; cursor: text; padding: 12px; line-height: 1.6; word-wrap: break-word; overflow-wrap: break-word;" data-dynamic-content="aiSummary">{{ summary }}</div>
@@ -647,7 +647,8 @@
                             <div class="session-info">
                                 <div class="session-time"><span data-i18n="sessionManagement.createdTime">建立時間</span>: --:--:--</div>
                                 <div class="session-project"><span data-i18n="sessionManagement.project">專案</span>: {{ project_directory }}</div>
-                                <div class="session-summary"><span data-i18n="sessionManagement.aiSummary">AI 摘要</span>: <span data-i18n="sessionManagement.loading">載入中...</span></div>
+                                <div class="session-summary"><span data-i18n="sessionManagement.aiSummary">摘要</span>: <span
+                                        data-i18n="sessionManagement.loading">載入中...</span></div>
                             </div>
                             <div class="session-actions">
                                 <button class="btn-small" id="viewSessionDetails" data-i18n="sessionManagement.viewDetails">詳細資訊</button>
@@ -692,7 +693,7 @@
                             <div class="setting-info">
                                 <div class="setting-label" data-i18n="settings.layoutMode">界面佈局模式</div>
                                 <div class="setting-description" data-i18n="settings.layoutModeDesc">
-                                    選擇 AI 摘要和回饋輸入的顯示方式
+                                    選擇 摘要和回饋輸入的顯示方式
                                 </div>
                             </div>
                             <div class="layout-mode-selector">
@@ -700,14 +701,14 @@
                                     <input type="radio" id="combinedVertical" name="layoutMode" value="combined-vertical" checked>
                                     <label for="combinedVertical">
                                         <div class="layout-option-title" data-i18n="settings.combinedVertical">垂直布局</div>
-                                        <div class="layout-option-desc" data-i18n="settings.combinedVerticalDesc">AI 摘要在上，回饋輸入在下，摘要和回饋在同一頁面</div>
+                                        <div class="layout-option-desc" data-i18n="settings.combinedVerticalDesc">摘要在上，回饋輸入在下，摘要和回饋在同一頁面</div>
                                     </label>
                                 </div>
                                 <div class="layout-option">
                                     <input type="radio" id="combinedHorizontal" name="layoutMode" value="combined-horizontal">
                                     <label for="combinedHorizontal">
                                         <div class="layout-option-title" data-i18n="settings.combinedHorizontal">水平布局</div>
-                                        <div class="layout-option-desc" data-i18n="settings.combinedHorizontalDesc">AI 摘要在左，回饋輸入在右，增大摘要可視區域</div>
+                                        <div class="layout-option-desc" data-i18n="settings.combinedHorizontalDesc">摘要在左，回饋輸入在右，增大摘要可視區域</div>
                                     </label>
                                 </div>
                             </div>
@@ -768,7 +769,7 @@
                             <div class="setting-info">
                                 <div class="setting-label" data-i18n="images.settings.base64Detail">Base64 相容模式</div>
                                 <div class="setting-description" data-i18n="images.settings.base64DetailHelp">
-                                    啟用後會在文字中包含完整的 Base64 圖片資料，提升與某些 AI 模型的相容性
+                                    啟用後會在文字中包含完整的 Base64 圖片資料，提升與某些 模型的相容性
                                 </div>
                                 <div class="setting-warning" data-i18n="images.settings.base64Warning">會增加傳輸量</div>
                             </div>
@@ -980,7 +981,7 @@
                         <div class="setting-item" style="border-bottom: none; padding-bottom: 16px;">
                             <div class="setting-info">
                                 <div class="setting-description" data-i18n="about.description" style="color: var(--text-secondary); font-size: 13px; line-height: 1.5;">
-                                    一個強大的 MCP 伺服器，為 AI 輔助開發工具提供人在回路的互動回饋功能。支援 Web UI 介面，並具備圖片上傳、命令執行、多語言等豐富功能。
+                                    一個強大的 MCP 伺服器，為 輔助開發工具提供人在回路的互動回饋功能。支援 Web UI 介面，並具備圖片上傳、命令執行、多語言等豐富功能。
                                 </div>
                             </div>
                         </div>
@@ -991,7 +992,7 @@
                         <!-- GitHub 專案 -->
                         <div class="setting-item" style="border-bottom: none; padding-bottom: 12px;">
                             <div class="setting-info">
-                                <div class="setting-label">📂 <span data-i18n="about.githubProject">GitHub 專案</span></div>
+                                <div class="setting-label"><span data-i18n="about.githubProject">GitHub 專案</span></div>
                                 <div class="setting-description" style="color: var(--text-secondary); font-size: 11px; margin-left: 24px;">
                                     https://github.com/Minidoracat/mcp-feedback-enhanced
                                 </div>
@@ -1157,7 +1158,7 @@
                     window.MCPFeedback.app = window.feedbackApp;
                 }
 
-                // 初始化完成後，立即渲染現有的 AI 摘要內容為 Markdown
+                // 初始化完成後，立即渲染現有的 摘要內容為 Markdown
                 setTimeout(function() {
                     if (window.feedbackApp && window.feedbackApp.uiManager) {
                         // 獲取當前的摘要內容
