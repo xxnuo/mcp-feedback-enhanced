@@ -1,7 +1,7 @@
 {
     "app": {
         "title": "MCP 交互反馈系统",
-        "subtitle": "AI 助手交互反馈平台",
+        "subtitle": "助手交互反馈平台",
         "projectDirectory": "项目目录",
         "clickToCopyPath": "点击复制完整路径",
         "clickToCopySessionId": "点击复制完整会话ID",
@@ -9,10 +9,10 @@
         "pathCopyFailed": "复制路径失败",
         "sessionIdCopied": "会话ID已复制到剪贴板",
         "sessionIdCopyFailed": "复制会话ID失败",
-        "updateFailed": "更新内容失败，请手动刷新页面以查看新的 AI 工作摘要"
+        "updateFailed": "更新内容失败，请手动刷新页面以查看新的 工作摘要"
     },
     "tabs": {
-        "summary": "AI 总结",
+        "summary": "总结",
         "commands": "命令",
         "command": "命令",
         "sessions": "会话管理",
@@ -22,7 +22,7 @@
     },
     "feedback": {
         "title": "提供反馈",
-        "description": "请提供您对 AI 工作成果的反馈意见。您可以输入文字反馈并上传相关图片。",
+        "description": "请提供您对 工作成果的反馈意见。您可以输入文字反馈并上传相关图片。",
         "textLabel": "文字反馈",
         "placeholder": "请在这里输入您的反馈...",
         "detailedPlaceholder": "请在这里输入您的反馈...\n\n提示：\n• 按 Ctrl+Enter/Cmd+Enter (支持数字键盘) 可快速提交\n• 按 Ctrl+I/Cmd+I 可聚焦输入框\n• 按 Ctrl+V/Cmd+V 可直接粘贴剪贴板图片",
@@ -50,9 +50,9 @@
         "sendFailed": "发送失败，请重试"
     },
     "summary": {
-        "title": "AI 工作摘要",
-        "description": "以下是 AI 助手完成的工作摘要，请仔细查看并提供您的反馈意见。",
-        "placeholder": "AI 工作摘要将在这里显示...",
+        "title": "工作摘要",
+        "description": "以下是 助手完成的工作摘要，请仔细查看并提供您的反馈意见。",
+        "placeholder": "工作摘要将在这里显示...",
         "empty": "目前没有摘要内容",
         "lastupdate": "最后更新",
         "refresh": "刷新"
@@ -90,7 +90,7 @@
         "history": "命令历史"
     },
     "combined": {
-        "summaryTitle": "AI 工作摘要",
+        "summaryTitle": "工作摘要",
         "feedbackTitle": "提供反馈"
     },
     "settings": {
@@ -100,11 +100,11 @@
         "languageDesc": "选择界面显示语言",
         "interface": "界面设定",
         "layoutMode": "界面布局模式",
-        "layoutModeDesc": "选择 AI 摘要和反馈输入的显示方式",
+        "layoutModeDesc": "选择 摘要和反馈输入的显示方式",
         "combinedVertical": "垂直布局",
-        "combinedVerticalDesc": "AI 摘要在上，反馈输入在下，适合标准屏幕使用",
+        "combinedVerticalDesc": "摘要在上，反馈输入在下，适合标准屏幕使用",
         "combinedHorizontal": "水平布局",
-        "combinedHorizontalDesc": "AI 摘要在左，反馈输入在右，适合宽屏幕使用",
+        "combinedHorizontalDesc": "摘要在左，反馈输入在右，适合宽屏幕使用",
         "autoClose": "自动关闭页面",
         "autoCloseDesc": "提交回馈后自动关闭页面",
         "theme": "主题",
@@ -220,7 +220,7 @@
         "todayAverageDuration": "今日平均时长",
         "createdTime": "建立时间",
         "project": "项目",
-        "aiSummary": "AI 总结",
+        "aiSummary": "总结",
         "noSummary": "无总结",
         "loading": "加载中...",
         "collapsePanel": "收合面板",
@@ -397,7 +397,7 @@
                 "5mb": "5MB"
             },
             "base64Detail": "Base64 兼容模式",
-            "base64DetailHelp": "启用后会在文本中包含完整的 Base64 图片数据，提升与某些 AI 模型的兼容性",
+            "base64DetailHelp": "启用后会在文本中包含完整的 Base64 图片数据，提升与某些 模型的兼容性",
             "base64Warning": "会增加传输量",
             "compatibilityHint": "图片无法正确识别？",
             "enableBase64Hint": "尝试启用 Base64 兼容模式"

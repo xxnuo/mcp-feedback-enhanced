@@ -1,7 +1,7 @@
 {
     "app": {
         "title": "MCP Interactive Feedback System",
-        "subtitle": "AI Assistant Interactive Feedback Platform",
+        "subtitle": "Assistant Interactive Feedback Platform",
         "projectDirectory": "Project Directory",
         "clickToCopyPath": "Click to copy full path",
         "clickToCopySessionId": "Click to copy full session ID",
@@ -9,10 +9,10 @@
         "pathCopyFailed": "Failed to copy path",
         "sessionIdCopied": "Session ID copied to clipboard",
         "sessionIdCopyFailed": "Failed to copy session ID",
-        "updateFailed": "Failed to update content, please manually refresh the page to view new AI work summary"
+        "updateFailed": "Failed to update content, please manually refresh the page to view new work summary"
     },
     "tabs": {
-        "summary": "AI Summary",
+        "summary": "Summary",
         "commands": "Commands",
         "command": "Commands",
         "sessions": "Session Management",
@@ -22,7 +22,7 @@
     },
     "feedback": {
         "title": "Provide Feedback",
-        "description": "Please provide your feedback on the AI assistant's work. You can enter text feedback and upload related images.",
+        "description": "Please provide your feedback on the assistant's work. You can enter text feedback and upload related images.",
         "textLabel": "Text Feedback",
         "placeholder": "Please enter your feedback here...",
         "detailedPlaceholder": "Please enter your feedback here...\n\nTips:\n• Press Ctrl+Enter/Cmd+Enter (numpad supported) for quick submit\n• Press Ctrl+I/Cmd+I to focus input box\n• Press Ctrl+V/Cmd+V to paste clipboard images directly",
@@ -50,9 +50,9 @@
         "sendFailed": "Send failed, please retry"
     },
     "summary": {
-        "title": "AI Work Summary",
-        "description": "Below is the work summary completed by the AI assistant. Please review carefully and provide your feedback.",
-        "placeholder": "AI work summary will be displayed here...",
+        "title": "Work Summary",
+        "description": "Below is the work summary completed by the assistant. Please review carefully and provide your feedback.",
+        "placeholder": "work summary will be displayed here...",
         "empty": "No summary content available",
         "lastupdate": "Last updated",
         "refresh": "Refresh"
@@ -90,7 +90,7 @@
         "history": "Command History"
     },
     "combined": {
-        "summaryTitle": "AI Work Summary",
+        "summaryTitle": "Work Summary",
         "feedbackTitle": "Provide Feedback"
     },
     "settings": {
@@ -100,11 +100,11 @@
         "languageDesc": "Select interface display language",
         "interface": "Interface Settings",
         "layoutMode": "Interface Layout Mode",
-        "layoutModeDesc": "Select how AI summary and feedback input are displayed",
+        "layoutModeDesc": "Select how summary and feedback input are displayed",
         "combinedVertical": "Vertical Layout",
-        "combinedVerticalDesc": "AI summary on top, feedback input below, suitable for standard screens",
+        "combinedVerticalDesc": "summary on top, feedback input below, suitable for standard screens",
         "combinedHorizontal": "Horizontal Layout",
-        "combinedHorizontalDesc": "AI summary on left, feedback input on right, suitable for widescreen displays",
+        "combinedHorizontalDesc": "summary on left, feedback input on right, suitable for widescreen displays",
         "autoClose": "Auto Close Page",
         "autoCloseDesc": "Automatically close page after submitting feedback",
         "theme": "Theme",
@@ -220,7 +220,7 @@
         "todayAverageDuration": "Today's Average Duration",
         "createdTime": "Created Time",
         "project": "Project",
-        "aiSummary": "AI Summary",
+        "aiSummary": "Summary",
         "noSummary": "No summary",
         "loading": "Loading...",
         "collapsePanel": "Collapse Panel",
@@ -397,7 +397,7 @@
                 "5mb": "5MB"
             },
             "base64Detail": "Base64 Compatibility Mode",
-            "base64DetailHelp": "When enabled, includes full Base64 image data in text, improving compatibility with certain AI models",
+            "base64DetailHelp": "When enabled, includes full Base64 image data in text, improving compatibility with certain models",
             "base64Warning": "Increases transmission size",
             "compatibilityHint": "Images not recognized correctly?",
             "enableBase64Hint": "Try enabling Base64 compatibility mode"
