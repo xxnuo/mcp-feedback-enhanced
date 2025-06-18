@@ -17,7 +17,7 @@
 {% set id_prefix = id_prefix or "default" %}
 {% set label_text = label_text or "圖片附件（可選）" %}
 {% set min_height = min_height or "120px" %}
-{% set upload_text = upload_text or "📎 點擊選擇圖片或拖放圖片到此處<br><small>支援 PNG、JPG、JPEG、GIF、BMP、WebP 等格式</small>" %}
+{% set upload_text = upload_text or "點擊選擇圖片或拖放圖片到此處<br><small>支援 PNG、JPG、JPEG、GIF、BMP、WebP 等格式</small>" %}
 
 
 
@@ -26,7 +26,7 @@
 
     <!-- 相容性提示區域 -->
     <div id="{{ id_prefix }}CompatibilityHint" class="compatibility-hint" style="display: none;">
-        <span data-i18n="images.settings.compatibilityHint">💡 圖片無法正確識別？</span>
+        <span data-i18n="images.settings.compatibilityHint">圖片無法正確識別？</span>
         <button type="button" id="{{ id_prefix }}EnableBase64Hint" class="compatibility-hint-btn" data-i18n="images.settings.enableBase64Hint">
             嘗試啟用 Base64 相容模式
         </button>

@@ -6,7 +6,7 @@
         "description": "一個強大的 MCP 伺服器，為 AI 輔助開發工具提供人在回路的互動回饋功能。支援 Web UI 介面，並具備圖片上傳、命令執行、多語言等豐富功能。",
         "author": "作者：Fábio Ferreira (原作者) / Minidoracat (增強版)",
         "authorLink": "GitHub: Minidoracat",
-        "credits": "⭐ 如果這個專案對您有幫助，請在 GitHub 上給我們一個星星！\n\n本增強版本由 Minidoracat 開發和維護，大幅擴展了專案功能，新增了 Web UI 介面、圖片支援、多語言能力以及許多其他改進功能。\n\n同時感謝 sanshao85 的 mcp-feedback-collector 專案提供的 UI 設計靈感。\n\n開源協作讓技術變得更美好！",
+        "credits": "如果這個專案對您有幫助，請在 GitHub 上給我們一個星星！\n\n本增強版本由 Minidoracat 開發和維護，大幅擴展了專案功能，新增了 Web UI 介面、圖片支援、多語言能力以及許多其他改進功能。\n\n同時感謝 sanshao85 的 mcp-feedback-collector 專案提供的 UI 設計靈感。\n\n開源協作讓技術變得更美好！",
         "projectDirectory": "專案目錄",
         "clickToCopyPath": "點擊複製完整路徑",
         "clickToCopySessionId": "點擊複製完整會話ID",
@@ -17,23 +17,23 @@
         "updateFailed": "更新內容失敗，請手動刷新頁面以查看新的 AI 工作摘要"
     },
     "tabs": {
-        "summary": "📋 AI 摘要",
-        "commands": "⚡ 命令",
-        "command": "⚡ 命令",
-        "sessions": "📋 會話管理",
-        "settings": "⚙️ 設定",
-        "combined": "📝 工作區",
-        "about": "ℹ️ 關於"
+        "summary": "AI 摘要",
+        "commands": "命令",
+        "command": "命令",
+        "sessions": "會話管理",
+        "settings": "設定",
+        "combined": "工作區",
+        "about": "關於"
     },
     "feedback": {
-        "title": "💬 提供回饋",
+        "title": "提供回饋",
         "description": "請提供您對 AI 工作成果的回饋意見。您可以輸入文字回饋並上傳相關圖片。",
         "textLabel": "文字回饋",
         "placeholder": "請在這裡輸入您的回饋...",
-        "detailedPlaceholder": "請在這裡輸入您的回饋...\n\n💡 小提示：\n• 按 Ctrl+Enter/Cmd+Enter (支援數字鍵盤) 可快速提交\n• 按 Ctrl+I/Cmd+I 可聚焦輸入框\n• 按 Ctrl+V/Cmd+V 可直接貼上剪貼板圖片",
+        "detailedPlaceholder": "請在這裡輸入您的回饋...\n\n小提示：\n• 按 Ctrl+Enter/Cmd+Enter (支援數字鍵盤) 可快速提交\n• 按 Ctrl+I/Cmd+I 可聚焦輸入框\n• 按 Ctrl+V/Cmd+V 可直接貼上剪貼板圖片",
         "imageLabel": "圖片附件（可選）",
-        "imageUploadText": "📎 點擊選擇圖片或拖放圖片到此處\n支援 PNG、JPG、JPEG、GIF、BMP、WebP 等格式",
-        "submit": "✅ 提交回饋",
+        "imageUploadText": "點擊選擇圖片或拖放圖片到此處\n支援 PNG、JPG、JPEG、GIF、BMP、WebP 等格式",
+        "submit": "提交回饋",
         "uploading": "上傳中...",
         "dragdrop": "拖放圖片到這裡或點擊上傳",
         "selectfiles": "選擇檔案",
@@ -55,7 +55,7 @@
         "sendFailed": "發送失敗，請重試"
     },
     "summary": {
-        "title": "📋 AI 工作摘要",
+        "title": "AI 工作摘要",
         "description": "以下是 AI 助手完成的工作摘要，請仔細查看並提供您的回饋意見。",
         "placeholder": "AI 工作摘要將在這裡顯示...",
         "empty": "目前沒有摘要內容",
@@ -63,12 +63,12 @@
         "refresh": "重新整理"
     },
     "commands": {
-        "title": "⚡ 命令執行",
+        "title": "命令執行",
         "description": "在此執行命令來驗證結果或收集更多資訊。命令將在專案目錄中執行。",
         "inputLabel": "命令輸入",
         "placeholder": "輸入要執行的命令...",
-        "execute": "▶️ 執行",
-        "runButton": "▶️ 執行",
+        "execute": "執行",
+        "runButton": "執行",
         "clear": "清除",
         "output": "命令輸出",
         "outputLabel": "命令輸出",
@@ -82,11 +82,11 @@
         "executing": "正在執行..."
     },
     "command": {
-        "title": "⚡ 命令執行",
+        "title": "命令執行",
         "inputLabel": "命令輸入",
         "placeholder": "輸入要執行的命令...",
-        "execute": "▶️ 執行",
-        "runButton": "▶️ 執行",
+        "execute": "執行",
+        "runButton": "執行",
         "clear": "清除",
         "output": "命令輸出",
         "running": "執行中...",
@@ -95,11 +95,11 @@
         "history": "命令歷史"
     },
     "combined": {
-        "summaryTitle": "📋 AI 工作摘要",
-        "feedbackTitle": "💬 提供回饋"
+        "summaryTitle": "AI 工作摘要",
+        "feedbackTitle": "提供回饋"
     },
     "settings": {
-        "title": "⚙️ 設定",
+        "title": "設定",
         "language": "語言",
         "currentLanguage": "當前語言",
         "languageDesc": "選擇界面顯示語言",
@@ -184,8 +184,8 @@
     },
     "buttons": {
         "ok": "確定",
-        "cancel": "❌ 取消",
-        "submit": "✅ 提交回饋",
+        "cancel": "取消",
+        "submit": "提交回饋",
         "processing": "處理中...",
         "submitted": "已提交",
         "retry": "重試",
@@ -194,7 +194,7 @@
         "download": "下載"
     },
     "session": {
-        "timeout": "⏰ 會話已超時，介面將自動關閉",
+        "timeout": "會話已超時，介面將自動關閉",
         "timeoutWarning": "會話即將超時",
         "timeoutDescription": "由於長時間無回應，會話已超時。介面將在 3 秒後自動關閉。",
         "closing": "正在關閉..."
@@ -323,7 +323,7 @@
     },
 
     "dynamic": {
-        "aiSummary": "測試 Web UI 功能\n\n🎯 **功能測試項目：**\n- Web UI 服務器啟動和運行\n- WebSocket 即時通訊\n- 回饋提交功能\n- 圖片上傳和預覽\n- 命令執行功能\n- 智能 Ctrl+V 圖片貼上\n- 多語言介面功能\n\n📋 **測試步驟：**\n1. 測試圖片上傳（拖拽、選擇檔案、剪貼簿）\n2. 在文字框內按 Ctrl+V 測試智能貼上\n3. 嘗試切換語言（繁中/簡中/英文）\n4. 測試命令執行功能\n5. 提交回饋和圖片\n\n請測試這些功能並提供回饋！",
+        "aiSummary": "測試 Web UI 功能\n\n🎯 **功能測試項目：**\n- Web UI 服務器啟動和運行\n- WebSocket 即時通訊\n- 回饋提交功能\n- 圖片上傳和預覽\n- 命令執行功能\n- 智能 Ctrl+V 圖片貼上\n- 多語言介面功能\n\n**測試步驟：**\n1. 測試圖片上傳（拖拽、選擇檔案、剪貼簿）\n2. 在文字框內按 Ctrl+V 測試智能貼上\n3. 嘗試切換語言（繁中/簡中/英文）\n4. 測試命令執行功能\n5. 提交回饋和圖片\n\n請測試這些功能並提供回饋！",
         "terminalWelcome": "歡迎使用互動回饋終端\n========================================\n專案目錄: {sessionId}\n輸入命令後按 Enter 或點擊執行按鈕\n支援的命令: ls, dir, pwd, cat, type 等\n\n$ "
     },
     "prompts": {
@@ -377,7 +377,7 @@
         }
     },
     "about": {
-        "title": "ℹ️ 關於",
+        "title": "關於",
         "appInfo": "應用程式資訊",
         "version": "版本",
         "projectLinks": "專案連結",
@@ -403,8 +403,8 @@
             },
             "base64Detail": "Base64 相容模式",
             "base64DetailHelp": "啟用後會在文字中包含完整的 Base64 圖片資料，提升與某些 AI 模型的相容性",
-            "base64Warning": "⚠️ 會增加傳輸量",
-            "compatibilityHint": "💡 圖片無法正確識別？",
+            "base64Warning": "會增加傳輸量",
+            "compatibilityHint": "圖片無法正確識別？",
             "enableBase64Hint": "嘗試啟用 Base64 相容模式"
         },
         "sizeLimitExceeded": "圖片 {filename} 大小為 {size}，超過 {limit} 限制！",

@@ -73,14 +73,14 @@ class I18nManager {
                     'projectDirectory': '專案目錄'
                 },
                 'tabs': {
-                    'feedback': '💬 回饋',
-                    'summary': '📋 AI 摘要',
-                    'command': '⚡ 命令',
-                    'settings': '⚙️ 設定'
+                    'feedback': '回饋',
+                    'summary': 'AI 摘要',
+                    'command': '命令',
+                    'settings': '設定'
                 },
                 'buttons': {
-                    'cancel': '❌ 取消',
-                    'submit': '✅ 提交回饋'
+                    'cancel': '取消',
+                    'submit': '提交回饋'
                 },
                 'settings': {
                     'language': '語言'
@@ -134,9 +134,9 @@ class I18nManager {
             // 更新 HTML lang 屬性
             document.documentElement.lang = language;
 
-            console.log(`✅ i18nManager 語言已切換到: ${language}`);
+            console.log(`i18nManager 語言已切換到: ${language}`);
         } else {
-            console.warn(`❌ i18nManager 不支援的語言: ${language}`);
+            console.warn(`i18nManager 不支援的語言: ${language}`);
         }
     }
 

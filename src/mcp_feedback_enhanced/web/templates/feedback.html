@@ -412,7 +412,7 @@
             <div class="session-status-info">
                 <div class="current-session-info">
                     <span class="session-indicator">
-                        📋 <span data-i18n="sessionManagement.currentSession">當前會話</span>:
+                        <span data-i18n="sessionManagement.currentSession">當前會話</span>:
                         <span id="currentSessionId" class="session-id-display"
                               data-full-id="{{ session_id if session_id else 'loading' }}"
                               data-i18n-title="app.clickToCopySessionId"
@@ -485,22 +485,22 @@
                 <div class="tab-buttons">
                     <!-- 工作區分頁 - 主要分頁 -->
                     <button class="tab-button active" data-tab="combined" data-i18n="tabs.combined">
-                        📝 工作區
+                        工作區
                     </button>
                     <button class="tab-button" data-tab="summary" data-i18n="tabs.summary">
-                        📋 AI 摘要
+                        AI 摘要
                     </button>
                     <button class="tab-button" data-tab="command" data-i18n="tabs.command">
-                        ⚡ 命令
+                        命令
                     </button>
                     <button class="tab-button" data-tab="sessions" data-i18n="tabs.sessions">
-                        📋 會話管理
+                        會話管理
                     </button>
                     <button class="tab-button" data-tab="settings" data-i18n="tabs.settings">
-                        ⚙️ 設定
+                        設定
                     </button>
                     <button class="tab-button" data-tab="about" data-i18n="tabs.about">
-                        ℹ️ 關於
+                        關於
                     </button>
                 </div>
             </div>
@@ -545,7 +545,7 @@
                             />
                         </div>
                         <button id="runCommandBtn" class="btn btn-primary" data-i18n="command.runButton" style="white-space: nowrap;">
-                            ▶️ 執行
+                            執行
                         </button>
                     </div>
                 </div>
@@ -557,7 +557,7 @@
                     <!-- AI 摘要區域 -->
                     <div class="combined-section">
                         <div class="section-header">
-                            <h3 class="combined-section-title" data-i18n="combined.summaryTitle">📋 AI 工作摘要</h3>
+                            <h3 class="combined-section-title" data-i18n="combined.summaryTitle">AI 工作摘要</h3>
                         </div>
                         <div class="combined-summary">
                             <div id="combinedSummaryContent" class="text-input" style="min-height: 200px; cursor: text; padding: 12px; line-height: 1.6; word-wrap: break-word; overflow-wrap: break-word;" data-dynamic-content="aiSummary">{{ summary }}</div>
@@ -567,9 +567,9 @@
                     <!-- 回饋輸入區域 -->
                     <div class="combined-section">
                         <div class="feedback-title-container">
-                            <h3 class="combined-section-title" data-i18n="combined.feedbackTitle">💬 提供回饋</h3>
+                            <h3 class="combined-section-title" data-i18n="combined.feedbackTitle">提供回饋</h3>
                             <button id="submitBtn" class="btn btn-success combined-submit-btn" data-i18n="buttons.submit">
-                                ✅ 提交回饋
+                                提交回饋
                             </button>
                         </div>
 
@@ -602,7 +602,7 @@
                                 data-i18n-placeholder="feedback.detailedPlaceholder"
                                 placeholder="請在這裡輸入您的回饋...
 
-💡 小提示：
+小提示：
 • 按 Ctrl+Enter/Cmd+Enter (支援數字鍵盤) 可快速提交
 • 按 Ctrl+V/Cmd+V 可直接貼上剪貼板圖片"
                                 style="min-height: 150px;"
@@ -770,7 +770,7 @@
                                 <div class="setting-description" data-i18n="images.settings.base64DetailHelp">
                                     啟用後會在文字中包含完整的 Base64 圖片資料，提升與某些 AI 模型的相容性
                                 </div>
-                                <div class="setting-warning" data-i18n="images.settings.base64Warning">⚠️ 會增加傳輸量</div>
+                                <div class="setting-warning" data-i18n="images.settings.base64Warning">會增加傳輸量</div>
                             </div>
                             <div class="base64-toggle-container">
                                 <label class="toggle-switch">
@@ -785,7 +785,7 @@
                 <!-- 自動定時提交設定卡片 -->
                 <div class="settings-card">
                     <div class="settings-card-header">
-                        <h3 class="settings-card-title" data-i18n="autoSubmit.title">⏰ 自動定時提交</h3>
+                        <h3 class="settings-card-title" data-i18n="autoSubmit.title">自動定時提交</h3>
                     </div>
                     <div class="settings-card-body">
                         <div class="setting-item">
@@ -937,7 +937,7 @@
                 <!-- 提示詞管理卡片 -->
                 <div class="settings-card">
                     <div class="settings-card-header">
-                        <h3 class="settings-card-title" data-i18n="prompts.management.title">📝 常用提示詞管理</h3>
+                        <h3 class="settings-card-title" data-i18n="prompts.management.title">常用提示詞管理</h3>
                     </div>
                     <div class="settings-card-body" id="promptManagementContainer">
                         <!-- 提示詞管理 UI 將在這裡動態生成 -->
@@ -1007,7 +1007,7 @@
                         <!-- Discord 支援 -->
                         <div class="setting-item" style="border-bottom: none; padding-bottom: 12px;">
                             <div class="setting-info">
-                                <div class="setting-label">💬 <span data-i18n="about.discordSupport">Discord 支援</span></div>
+                                <div class="setting-label"><span data-i18n="about.discordSupport">Discord 支援</span></div>
                                 <div class="setting-description" style="color: var(--text-secondary); font-size: 11px; margin-left: 24px;">
                                     https://discord.gg/ACjf9Q58
                                 </div>
