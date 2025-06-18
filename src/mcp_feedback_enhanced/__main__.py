@@ -136,7 +136,35 @@ def test_web_ui_simple():
 
         print("🔧 創建測試會話...")
         with tempfile.TemporaryDirectory() as temp_dir:
-            markdown_test_content = """# Web UI 測試 - Markdown 渲染功能
+            markdown_test_content = """# Web UI Test - Markdown
+
+## 🎯 Goal
+Verify the Markdown syntax display functionality of the **combinedSummaryContent** area
+
+### ✨ Supported Syntax Features
+
+#### Text Formatting
+- **Bold text** using double asterisks
+- *Italic text* using single asterisks
+- ~~Strikethrough text~~ using double tilde
+- `Inline code` using backticks
+
+#### Code Blocks
+```javascript
+// JavaScript example
+function renderMarkdown(content) {
+    return marked.parse(content);
+}
+```
+
+```python
+# Python example
+def process_feedback(data):
+    return {"status": "success", "data": data}
+```
+"""
+
+            markdown_test_content2 = """# Web UI 測試 - Markdown 渲染功能
 
 ## 🎯 測試目標
 驗證 **combinedSummaryContent** 區域的 Markdown 語法顯示功能
@@ -199,7 +227,7 @@ def process_feedback(data):
 - URL 驗證：限制允許的 URL 協議
 
 ### 📝 測試結果
-如果您能看到上述內容以正確的格式顯示，表示 Markdown 渲染功能運作正常！"""
+如果您能看到上述內容以正確的格式顯示，表示 Markdown 渲染功能運作正常！"""  # noqa: F841
 
             created_session_id = manager.create_session(temp_dir, markdown_test_content)
 
