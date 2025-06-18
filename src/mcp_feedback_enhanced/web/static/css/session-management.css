@@ -298,8 +298,8 @@
 .connection-indicator {
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 4px 12px;
+  padding: 0;
+    padding-left: 1px;
   border-radius: 16px;
   background: rgba(0, 0, 0, 0.3);
   border: 1px solid transparent;
@@ -353,15 +353,15 @@
 
 @keyframes pulse-ring {
   0% {
-      transform: scale(1);
+    transform: scale(1);
       opacity: 0.3;
     }
-  
+    
     50% {
       transform: scale(1.5);
       opacity: 0.1;
     }
-  
+    
     100% {
       transform: scale(2);
       opacity: 0;
@@ -370,37 +370,32 @@
 
 .connection-quality {
   display: flex;
-  align-items: center;
-  gap: 8px;
   margin-left: 8px;
 }
 
 .latency-indicator {
-  font-family: 'Consolas', 'Monaco', monospace;
-  font-size: 11px;
-  opacity: 0.8;
+    opacity: 0.8;
 }
 
 .signal-strength {
   display: flex;
-  gap: 2px;
   align-items: flex-end;
 }
 
 .signal-bar {
   width: 3px;
-  height: 6px;
+  height: 3px;
   background: rgba(255, 255, 255, 0.3);
   border-radius: 1px;
   transition: background var(--transition-fast) ease;
 }
 
 .signal-bar:nth-child(2) {
-  height: 8px;
+  height: 4px;
 }
 
 .signal-bar:nth-child(3) {
-  height: 10px;
+  height: 5px;
 }
 
 .signal-bar.active {
@@ -713,7 +708,7 @@
 /* ===== 載入狀態 ===== */
 .loading-skeleton {
   background: linear-gradient(90deg,
-        var(--bg-tertiary) 25%,
+      var(--bg-tertiary) 25%,
         rgba(255, 255, 255, 0.1) 50%,
         var(--bg-tertiary) 75%);
   background-size: 200% 100%;
@@ -722,9 +717,9 @@
 
 @keyframes loading-shimmer {
   0% {
-      background-position: -200% 0;
+    background-position: -200% 0;
     }
-  
+    
     100% {
       background-position: 200% 0;
     }
