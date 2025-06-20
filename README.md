@@ -1,3 +1,51 @@
+# This version usage
+
+```bash
+mkdir -p ~/.config && cd ~/.config
+git clone https://github.com/xxnuo/mcp-feedback-enhanced.git
+```
+
+Rules:
+```
+# Language Rule
+
+Dialogues use Simplified Chinese. Code and comments use the same language as the context.
+
+# MCP Interactive Feedback Rules
+
+1. During any process, task, or conversation, whether asking, replying, or completing phased tasks, you must call MCP mcp-feedback-enhanced.
+2. Whenever user feedback is received, if the feedback content is not empty, you must call MCP mcp-feedback-enhanced again and adjust behavior based on the feedback content.
+3. Only when the user explicitly indicates "end" or "no more interaction needed" can you stop calling MCP mcp-feedback-enhanced, and the process is considered complete.
+4. Unless receiving termination instructions, all steps must repeatedly call MCP mcp-feedback-enhanced.
+5. Before completing tasks, you must use the MCP mcp-feedback-enhanced tool to ask users for feedback.
+```
+
+MCP:
+```json
+{
+  "mcpServers": {
+    "mcp-feedback-enhanced": {
+      "command": "uv",
+      "args": [
+        "--directory",
+        "~/.config/mcp-feedback-enhanced",
+        "run",
+        "python",
+        "-m",
+        "mcp_feedback_enhanced"
+      ],
+      "timeout": 6000,
+      "env": {
+        "MCP_DESKTOP_MODE": "true",
+        "MCP_DEBUG": "false",
+        "MCP_WEB_PORT": "18765"
+      },
+      "autoApprove": ["interactive_feedback"]
+    }
+  }
+}
+```
+
 # MCP Feedback Enhanced
 
 **🌐 Language / 語言切換:** **English** | [繁體中文](README.zh-TW.md) | [简体中文](README.zh-CN.md)
