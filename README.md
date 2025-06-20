@@ -52,6 +52,10 @@ MCP:
 }
 ```
 
+Finally, switch to horizontal layout in the settings page of the MCP window to achieve the best display effect.
+
+---
+
 # MCP Feedback Enhanced
 
 **🌐 Language / 語言切換:** **English** | [繁體中文](README.zh-TW.md) | [简体中文](README.zh-CN.md)
