@@ -1,4 +1,10 @@
-# This version usage
+# This version
+
+## Preview
+
+![image](https://github.com/user-attachments/assets/59b49447-478e-4b57-b552-32810b9c810d)
+
+## Usage
 
 ```bash
 mkdir -p ~/.config && cd ~/.config
